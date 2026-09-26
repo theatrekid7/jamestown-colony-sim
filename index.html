@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jamestown 1607: The Chesapeake</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <div class="map-panel">
+        <canvas id="gameCanvas" width="1000" height="760"></canvas>
+        <div class="mini-map-label">Chesapeake Bay • <span id="seasonLabel">Spring</span></div>
+      </div>
+
+      <aside class="side-panel">
+        <h1>Jamestown 1607</h1>
+
+        <section class="panel-section">
+          <div class="section-title">Colony Status</div>
+          <div class="stats-grid">
+            <div class="stat-box"><span>Food</span><strong id="foodStat">24</strong></div>
+            <div class="stat-box"><span>People</span><strong id="popStat">18</strong></div>
+            <div class="stat-box"><span>Wood</span><strong id="woodStat">10</strong></div>
+            <div class="stat-box"><span>Tools</span><strong id="toolStat">5</strong></div>
+            <div class="stat-box"><span>Copper</span><strong id="copperStat">2</strong></div>
+            <div class="stat-box"><span>Beads</span><strong id="beadStat">3</strong></div>
+            <div class="stat-box"><span>Morale</span><strong id="moraleStat">60</strong></div>
+            <div class="stat-box"><span>Trust</span><strong id="trustStat">42</strong></div>
+          </div>
+        </section>
+
+        <section class="panel-section">
+          <div class="section-title">Survival</div>
+          <div class="status-bar"><div id="survivalFill" class="status-fill"></div></div>
+        </section>
+
+        <section class="panel-section">
+          <div class="section-title">Objective</div>
+          <div id="objectiveText" class="objective-text">
+            Explore the bay, secure food, and keep Jamestown alive through its first winter.
+          </div>
+        </section>
+
+        <section class="panel-section">
+          <div class="section-title">Key Figures</div>
+          <div id="npcList" class="npc-list"></div>
+        </section>
+
+        <section class="panel-section">
+          <div class="section-title">Actions</div>
+          <div class="action-grid">
+            <button id="harvestBtn">Gather</button>
+            <button id="tradeBtn">Trade</button>
+            <button id="fortifyBtn">Fortify</button>
+            <button id="mapBtn">Map Bay</button>
+            <button id="seasonBtn" class="accent">Next Season</button>
+          </div>
+        </section>
+
+        <section class="panel-section">
+          <div class="section-title">Event Log</div>
+          <div id="log" class="log"></div>
+        </section>
+      </aside>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
